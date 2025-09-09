@@ -1,0 +1,75 @@
+/* Resetando estilo padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #006a4d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 40px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+section h1, section h2, section h3 {
+    color: #006a4d;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea {
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color:
