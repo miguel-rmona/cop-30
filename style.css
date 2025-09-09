@@ -5,71 +5,228 @@
     box-sizing: border-box;
 }
 
-/* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background: linear-gradient(to right, #0e101b, #1c1e30);
+    overflow-x: hidden;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
 }
 
 header {
-    background-color: #006a4d;
-    color: white;
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
 }
 
 header .logo img {
-    max-width: 150px;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1);
 }
 
 nav ul {
     list-style-type: none;
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 20px;
+    font-size: 18px;
+    position: relative;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f9b42f;
 }
 
 section {
-    padding: 40px;
-    margin: 20px;
-    background-color: #fff;
+    padding: 80px 20px;
+    margin-top: 60px;
     border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 1200px;
+    margin: 80px auto;
 }
 
 section h1, section h2, section h3 {
-    color: #006a4d;
+    font-size: 36px;
+    font-weight: bold;
+    color: #f9b42f;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #bbb;
+    text-align: center;
 }
 
 ul {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
 }
 
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f9b42f;
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateX(10px);
+}
+
+input[type="number"], button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    margin: 10px 0;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+input[type="number"]:focus, button:focus {
+    background-color: #f9b42f;
+}
+
+input[type="number"] {
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    background-color: #006a4d;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f9b42f;
+}
+
+#pontuacao-section {
+    background-color: #1c1e30;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #111;
+    color: #bbb;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Efeitos de transição nos botões */
+button:hover, input[type="number"]:focus {
+    transform: scale(1.05);
+}
+
+/* Animação de fade-in para seções */
+section {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para o formulário de contato */
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 20px auto;
 }
 
-form label, form input, form textarea {
-    margin-bottom: 10px;
+form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #f9b42f;
 }
 
 form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
     border-radius: 5px;
+    outline: none;
 }
 
 form button {
-    background-color:
+    width: 100%;
+    background-color: #006a4d;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #f9b42f;
+}
+
+/* Estilo para elementos de scroll */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #f9b42f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1c1e30;
+}
