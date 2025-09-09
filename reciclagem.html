@@ -3,48 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reciclagem e Sistema de Pontos</title>
+    <title>Reciclagem - COP 30</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
-            <img src="logo-cop30.png" alt="Logo COP30">
+            <h1>COP 30</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Início</a></li>
-                <li><a href="cop30.html">O que é a COP30</a></li>
-                <li><a href="reciclagem.html">Reciclagem e Pontos</a></li>
+                <li><a href="cop30.html">Sobre</a></li>
+                <li><a href="reciclagem.html" class="active">Reciclagem</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Seção de Reciclagem -->
-    <section id="reciclagem">
-        <div class="content">
-            <h2>Reciclagem e Sistema de Pontos</h2>
-            <p>Contribua para um mundo melhor. Ao reciclar, você ganha pontos que podem ser trocados por prêmios como comida e cestas básicas.</p>
+    <!-- Seção introdutória -->
+    <section>
+        <h2>Reciclagem e Sustentabilidade</h2>
+        <p>
+            A reciclagem é uma das formas mais eficazes de reduzir o impacto ambiental, economizar recursos naturais
+            e promover uma economia circular. Pequenas atitudes no dia a dia fazem grande diferença para o planeta.
+        </p>
+    </section>
 
-            <div class="form">
-                <label for="lixo">Quantidade de lixo reciclado (kg):</label>
-                <input type="number" id="lixo" name="lixo">
-                <button onclick="calcularPontos()">Calcular Pontos</button>
+    <!-- Benefícios em cards -->
+    <section>
+        <h2>Benefícios da Reciclagem</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Redução de Resíduos</h3>
+                <p>Diminui a quantidade de lixo nos aterros sanitários e no meio ambiente.</p>
             </div>
+            <div class="card">
+                <h3>Economia de Recursos</h3>
+                <p>Reaproveitamento de materiais reduz a necessidade de extração de matérias-primas.</p>
+            </div>
+            <div class="card">
+                <h3>Consciência Ambiental</h3>
+                <p>Estimula práticas responsáveis e promove mudanças sociais positivas.</p>
+            </div>
+        </div>
+    </section>
 
-            <div id="resultado">
-                <p id="pontuacao"></p>
-            </div>
+    <!-- Como reciclar -->
+    <section>
+        <h2>Como Reciclar Melhor</h2>
+        <p>
+            Separe corretamente seu lixo em reciclável e orgânico. Materiais como papel, plástico, vidro e metal podem
+            ganhar uma nova vida. Procure cooperativas e pontos de coleta na sua cidade.
+        </p>
+        <div style="text-align:center; margin-top:2rem;">
+            <a href="index.html" class="btn">Voltar ao Início</a>
         </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 COP30 | Todos os direitos reservados</p>
+        <p>&copy; 2025 COP 30 - Todos os direitos reservados.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+
