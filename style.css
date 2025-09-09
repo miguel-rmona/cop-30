@@ -5,51 +5,54 @@
     box-sizing: border-box;
 }
 
+/* Corpo do site */
 body {
     font-family: 'Roboto', sans-serif;
     color: #fff;
-    background: linear-gradient(to right, #0e101b, #1c1e30);
+    background-color: #111;
     overflow-x: hidden;
-    line-height: 1.6;
 }
 
+/* Cabeçalho fixo */
 header {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px 0;
-    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
     z-index: 10;
+    text-align: center;
 }
 
 header .logo img {
-    max-width: 200px;
-    transition: transform 0.3s ease;
+    width: 200px;
+    transition: transform 0.3s;
 }
 
 header .logo img:hover {
     transform: scale(1.1);
 }
 
+/* Navegação */
 nav ul {
     list-style-type: none;
-    padding: 10px;
     display: flex;
     justify-content: center;
+    padding: 10px 0;
 }
 
 nav ul li {
     margin: 0 20px;
-    font-size: 18px;
-    position: relative;
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
+    color: #fff;
     font-weight: bold;
+    font-size: 18px;
     text-transform: uppercase;
+    letter-spacing: 1px;
     transition: color 0.3s ease;
 }
 
@@ -57,89 +60,42 @@ nav ul li a:hover {
     color: #f9b42f;
 }
 
+/* Estilo para seções */
 section {
-    padding: 80px 20px;
-    margin-top: 60px;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    max-width: 1200px;
-    margin: 80px auto;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-section h1, section h2, section h3 {
+/* Imagem de fundo Parallax */
+.parallax {
+    background-image: url('cop30-background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.parallax h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* Seção comum */
+section h2, section h3 {
     font-size: 36px;
     font-weight: bold;
     color: #f9b42f;
-    text-align: center;
     margin-bottom: 20px;
 }
 
 section p {
     font-size: 18px;
-    line-height: 1.8;
+    line-height: 1.6;
     color: #bbb;
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 20px;
-}
-
-ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #f9b42f;
-    transition: transform 0.3s ease;
-}
-
-ul li:hover {
-    transform: translateX(10px);
-}
-
-input[type="number"], button {
-    padding: 15px;
-    font-size: 18px;
-    border: none;
-    border-radius: 10px;
-    outline: none;
-    margin: 10px 0;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
-
-input[type="number"]:focus, button:focus {
-    background-color: #f9b42f;
-}
-
-input[type="number"] {
-    background-color: #333;
-    color: #fff;
-}
-
-button {
-    background-color: #006a4d;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #f9b42f;
-}
-
-#pontuacao-section {
-    background-color: #1c1e30;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 30px;
 }
 
 footer {
@@ -147,86 +103,56 @@ footer {
     color: #bbb;
     padding: 20px;
     text-align: center;
-    font-size: 14px;
     position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-/* Efeitos de transição nos botões */
-button:hover, input[type="number"]:focus {
-    transform: scale(1.05);
-}
-
-/* Animação de fade-in para seções */
-section {
-    animation: fadeIn 1s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Estilo para o formulário de contato */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-form label {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: #f9b42f;
-}
-
-form input, form textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
+/* Efeitos de hover nos botões */
+button {
+    background-color: #006a4d;
+    color: white;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
-    outline: none;
-}
-
-form button {
-    width: 100%;
-    background-color: #006a4d;
-    color: #fff;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
     cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f9b42f;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 20px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border: 2px solid #f9b42f;
+    background-color: #111;
+    color: #fff;
 }
 
-form button:hover {
-    background-color: #f9b42f;
+/* Animações */
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
-/* Estilo para elementos de scroll */
-::-webkit-scrollbar {
-    width: 8px;
+/* Resultado do sistema de pontos */
+#resultado {
+    margin-top: 20px;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: #f9b42f;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #1c1e30;
+#pontuacao {
+    font-size: 24px;
+    color: #f9b42f;
 }
